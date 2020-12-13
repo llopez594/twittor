@@ -25,11 +25,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="40224f3d-c2bf-490f-be5e-3da5be7831ea" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/twittor.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/handlers/handlers.go" beforeDir="false" afterPath="$PROJECT_DIR$/handlers/handlers.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.exe" beforeDir="false" afterPath="$PROJECT_DIR$/main.exe" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,10 +85,10 @@
     <integration-enabled>true</integration-enabled>
   </component>
   <component name="WindowStateProjectService">
-    <state x="312" y="88" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607873799749">
+    <state x="407" y="96" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607886524813">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state x="312" y="88" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.860/1440.145.1440.860@0.0.1440.860" timestamp="1607873799749" />
+    <state x="407" y="96" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.860/1440.145.1440.860@0.0.1440.860" timestamp="1607886524813" />
     <state x="221" y="75" key="SettingsEditor" timestamp="1607864486408">
       <screen x="0" y="0" width="1440" height="860" />
     </state>

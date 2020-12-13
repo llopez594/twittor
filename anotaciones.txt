@@ -1,0 +1,9 @@
+
+repositorio en github(privado)
+https://github.com/llopez594/twittor.git
+
+link de heroku
+https://twitor.herokuapp.com/
+
+link de acceso a mongoDB
+mongodb+srv://sa:<password>@twitter.slxjf.mongodb.net/test
