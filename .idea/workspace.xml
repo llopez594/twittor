@@ -27,8 +27,7 @@
     <list default="true" id="40224f3d-c2bf-490f-be5e-3da5be7831ea" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/handlers/handlers.go" beforeDir="false" afterPath="$PROJECT_DIR$/handlers/handlers.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.exe" beforeDir="false" afterPath="$PROJECT_DIR$/main.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +41,7 @@
       </list>
     </option>
   </component>
-  <component name="GOROOT" path="E:\Go" />
+  <component name="GOROOT" path="C:\Go" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -65,10 +64,13 @@
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="com.goide.configuration.GoLibrariesConfigurableProvider" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../API-login-go-mysql-master" />
+    <property name="settings.editor.selected.configurable" value="go.sdk" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
@@ -89,9 +91,14 @@
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="407" y="96" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.860/1440.145.1440.860@0.0.1440.860" timestamp="1607886524813" />
-    <state x="221" y="75" key="SettingsEditor" timestamp="1607864486408">
-      <screen x="0" y="0" width="1440" height="860" />
+    <state x="507" y="183" key="FileChooserDialogImpl" timestamp="1607953201262">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="507" y="183" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1607953201262" />
+    <state x="236" y="73" key="SettingsEditor" timestamp="1607950344766">
+      <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="221" y="75" key="SettingsEditor/0.0.1440.860/1440.145.1440.860@0.0.1440.860" timestamp="1607864486408" />
+    <state x="236" y="73" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1607950344766" />
   </component>
 </project>
