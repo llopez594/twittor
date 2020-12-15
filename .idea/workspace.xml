@@ -27,10 +27,6 @@
     <list default="true" id="40224f3d-c2bf-490f-be5e-3da5be7831ea" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/handlers/handlers.go" beforeDir="false" afterPath="$PROJECT_DIR$/handlers/handlers.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.exe" beforeDir="false" afterPath="$PROJECT_DIR$/main.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/claim.go" beforeDir="false" afterPath="$PROJECT_DIR$/models/claim.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers/registro.go" beforeDir="false" afterPath="$PROJECT_DIR$/routers/registro.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers/verPerfil.go" beforeDir="false" afterPath="$PROJECT_DIR$/routers/verPerfil.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
