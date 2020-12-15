@@ -1,0 +1,84 @@
+Index: handlers/handlers.go
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package handlers\r\n\r\nimport (\r\n\t\"github.com/llopez594/twittor/routers\"\r\n\t\"log\"\r\n\t\"net/http\"\r\n\t\"os\"\r\n\r\n\t\"github.com/gorilla/mux\"\r\n\t\"github.com/llopez594/twittor/middlew\"\r\n\t\"github.com/rs/cors\"\r\n)\r\n\r\n/*Manejadores setio mi puerto, el handler y pongo a escuchar mi Servidor*/\r\nfunc Manejadores() {\r\n\trouter := mux.NewRouter()\r\n\r\n\trouter.HandleFunc(\"/registro\", middlew.ChequeoBD(routers.Registro)).Methods(\"POST\")\r\n\trouter.HandleFunc(\"/login\", middlew.ChequeoBD(routers.Login)).Methods(\"POST\")\r\n\trouter.HandleFunc(\"/verperfil\", middlew.ChequeoBD(middlew.ValidoJWT(routers.VerPerfil))).Methods(\"GET\")\r\n\r\n\r\n\r\n\tPORT := os.Getenv(\"PORT\")\r\n\tif PORT == \"\" {\r\n\t\tPORT = \"8080\"\r\n\t}\r\n\thandler := cors.AllowAll().Handler(router)\r\n\tlog.Fatal(http.ListenAndServe(\":\"+PORT, handler))\r\n\r\n\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- handlers/handlers.go	(revision 8fec5bfa606557c697024bc98ba680b65e7312ab)
++++ handlers/handlers.go	(date 1607989414112)
+@@ -18,7 +18,8 @@
+ 	router.HandleFunc("/registro", middlew.ChequeoBD(routers.Registro)).Methods("POST")
+ 	router.HandleFunc("/login", middlew.ChequeoBD(routers.Login)).Methods("POST")
+ 	router.HandleFunc("/verperfil", middlew.ChequeoBD(middlew.ValidoJWT(routers.VerPerfil))).Methods("GET")
+-
++	router.HandleFunc("/modificarPerfil", middlew.ChequeoBD(middlew.ValidoJWT(routers.ModificarPerfil))).Methods("PUT")
++	router.HandleFunc("/tweet", middlew.ChequeoBD(middlew.ValidoJWT(routers.GraboTweet))).Methods("POST")
+ 
+ 
+ 	PORT := os.Getenv("PORT")
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"BranchesTreeState\">\r\n    <expand>\r\n      <path>\r\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n        <item name=\"LOCAL_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n      </path>\r\n      <path>\r\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n        <item name=\"REMOTE_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n      </path>\r\n      <path>\r\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n        <item name=\"REMOTE_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n        <item name=\"GROUP_NODE:heroku\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n      </path>\r\n      <path>\r\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n        <item name=\"REMOTE_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n        <item name=\"GROUP_NODE:origin\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n      </path>\r\n    </expand>\r\n    <select />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"40224f3d-c2bf-490f-be5e-3da5be7831ea\" name=\"Default Changelist\" comment=\"\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/go.mod\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/go.mod\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/handlers/handlers.go\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/handlers/handlers.go\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/main.exe\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/main.exe\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Go File\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"GOROOT\" path=\"E:\\Go\" />\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GoLibraries\">\r\n    <option name=\"indexEntireGoPath\" value=\"false\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"1lbSIRlwuvP0edhPwywVYX0FqjO\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">\r\n    <property name=\"DatabaseDriversLRU\" value=\"mongo\" />\r\n    <property name=\"DefaultGoTemplateProperty\" value=\"Go File\" />\r\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\r\n    <property name=\"WebServerToolWindowFactoryState\" value=\"false\" />\r\n    <property name=\"configurable.Global.GOPATH.is.expanded\" value=\"true\" />\r\n    <property name=\"configurable.Module.GOPATH.is.expanded\" value=\"false\" />\r\n    <property name=\"configurable.Project.GOPATH.is.expanded\" value=\"true\" />\r\n    <property name=\"go.import.settings.migrated\" value=\"true\" />\r\n    <property name=\"go.sdk.automatically.set\" value=\"true\" />\r\n    <property name=\"go.tried.to.enable.integration.vgo.integrator\" value=\"true\" />\r\n    <property name=\"last_opened_file_path\" value=\"$PROJECT_DIR$\" />\r\n    <property name=\"settings.editor.selected.configurable\" value=\"com.goide.configuration.GoLibrariesConfigurableProvider\" />\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n    <option name=\"oldMeFiltersMigrated\" value=\"true\" />\r\n  </component>\r\n  <component name=\"VgoProject\">\r\n    <integration-enabled>true</integration-enabled>\r\n  </component>\r\n  <component name=\"WindowStateProjectService\">\r\n    <state x=\"407\" y=\"96\" key=\"#com.intellij.execution.impl.EditConfigurationsDialog\" timestamp=\"1607886524813\">\r\n      <screen x=\"0\" y=\"0\" width=\"1440\" height=\"860\" />\r\n    </state>\r\n    <state x=\"407\" y=\"96\" key=\"#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.860/1440.145.1440.860@0.0.1440.860\" timestamp=\"1607886524813\" />\r\n    <state x=\"221\" y=\"75\" key=\"SettingsEditor\" timestamp=\"1607864486408\">\r\n      <screen x=\"0\" y=\"0\" width=\"1440\" height=\"860\" />\r\n    </state>\r\n    <state x=\"221\" y=\"75\" key=\"SettingsEditor/0.0.1440.860/1440.145.1440.860@0.0.1440.860\" timestamp=\"1607864486408\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/workspace.xml	(revision 8fec5bfa606557c697024bc98ba680b65e7312ab)
++++ .idea/workspace.xml	(date 1607989759669)
+@@ -26,9 +26,10 @@
+   <component name="ChangeListManager">
+     <list default="true" id="40224f3d-c2bf-490f-be5e-3da5be7831ea" name="Default Changelist" comment="">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/handlers/handlers.go" beforeDir="false" afterPath="$PROJECT_DIR$/handlers/handlers.go" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/main.exe" beforeDir="false" afterPath="$PROJECT_DIR$/main.exe" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/routers/registro.go" beforeDir="false" afterPath="$PROJECT_DIR$/routers/registro.go" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/routers/verPerfil.go" beforeDir="false" afterPath="$PROJECT_DIR$/routers/verPerfil.go" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -45,6 +46,7 @@
+   <component name="GOROOT" path="E:\Go" />
+   <component name="Git.Settings">
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
++    <option name="UPDATE_TYPE" value="REBASE" />
+   </component>
+   <component name="GoLibraries">
+     <option name="indexEntireGoPath" value="false" />
+Index: routers/registro.go
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package routers\r\n\r\nimport (\r\n\t\"encoding/json\"\r\n\t\"github.com/llopez594/twittor/bd\"\r\n\t\"github.com/llopez594/twittor/models\"\r\n\t\"net/http\"\r\n)\r\n\r\n/*Registro es la funcion para crear en la BD el registro de usuario */\r\nfunc Registro(w http.ResponseWriter, r *http.Request){\r\n\r\n\tvar t models.Usuario\r\n\terr := json.NewDecoder(r.Body).Decode(&t)\r\n\tif err != nil {\r\n\t\thttp.Error(w, \"Error en los datos recibidos \"+ err.Error(), 400)\r\n\t\treturn\r\n\t}\r\n\r\n\tif len(t.Email)==0 {\r\n\t\thttp.Error(w, \"El email de usuario es requerido\", 400)\r\n\t\treturn\r\n\t}\r\n\tif len(t.Password) < 6 {\r\n\t\thttp.Error(w, \"Debe especificar una Contraseña de al menos 6 caracteres\", 400)\r\n\t\treturn\r\n\t}\r\n\r\n\t_, encontrado, _ := bd.ChequeoYaExisteUsuario(t.Email)\r\n\tif encontrado == true {\r\n\t\thttp.Error(w, \"Ya existe un usuario registrado con ese email\", 400)\r\n\t\treturn\r\n\t}\r\n\r\n\t_, status, err := bd.InsertoRegistro(t)\r\n\tif err != nil {\r\n\t\thttp.Error(w, \"Ocurrio un error al intentar realizar el registro de usuario \"+err.Error(), 400)\r\n\t\treturn\r\n\t}\r\n\r\n\tif status == false {\r\n\t\thttp.Error(w, \"No se ha logrado insertar el registro de usuario \", 400)\r\n\t\treturn\r\n\t}\r\n\tw.WriteHeader(http.StatusCreated)\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- routers/registro.go	(revision 8fec5bfa606557c697024bc98ba680b65e7312ab)
++++ routers/registro.go	(date 1607985694320)
+@@ -42,5 +42,6 @@
+ 		http.Error(w, "No se ha logrado insertar el registro de usuario ", 400)
+ 		return
+ 	}
++
+ 	w.WriteHeader(http.StatusCreated)
+ }
+Index: routers/verPerfil.go
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package routers\r\n\r\nimport (\r\n\t\"encoding/json\"\r\n\t\"github.com/llopez594/twittor/bd\"\r\n\t\"net/http\"\r\n)\r\n\r\n/*VerPerfil permite extraer los valores del perfil */\r\nfunc VerPerfil(w http.ResponseWriter, r *http.Request) {\r\n\r\n\tID := r.URL.Query().Get(\"id\")\r\n\tif len(ID) < 1 {\r\n\t\thttp.Error(w,\"Debe enviar el parametro ID\", http.StatusBadRequest)\r\n\t\treturn\r\n\t}\r\n\r\n\tperfil, err := bd.BuscoPerfil(ID)\r\n\tif err != nil {\r\n\t\thttp.Error(w, \"Ocurrio un error al intentar buscar el registro \"+err.Error(), 400)\r\n\t\treturn\r\n\t}\r\n\r\n\tw.Header().Set(\"context-type\", \"application/json\")\r\n\tw.WriteHeader(http.StatusCreated)\r\n\tjson.NewEncoder(w).Encode(perfil)\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- routers/verPerfil.go	(revision 8fec5bfa606557c697024bc98ba680b65e7312ab)
++++ routers/verPerfil.go	(date 1607989285694)
+@@ -21,8 +21,8 @@
+ 		return
+ 	}
+ 
+-	w.Header().Set("context-type", "application/json")
+-	w.WriteHeader(http.StatusCreated)
++	w.Header().Set("Content-Type", "application/json")
++	w.WriteHeader(http.StatusOK)
+ 	json.NewEncoder(w).Encode(perfil)
+ 
+ }
