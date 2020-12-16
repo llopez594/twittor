@@ -25,8 +25,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="40224f3d-c2bf-490f-be5e-3da5be7831ea" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/bd/borroRelacion.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bd/consultoRelacion.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bd/insertoRelacion.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bd/leoTweetsSeguidores.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bd/leoUsuariosTodos.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/devueltoTweetsSeguidores.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/relacion.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/respuestaConsultaRelacion.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routers/altaRelacion.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routers/bajaRelacion.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routers/consultaRelacion.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routers/leoTweetsSeguidores.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routers/listaUsuarios.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routers/obtenerAvatar.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routers/obtenerBanner.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routers/subirAvatar.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routers/subirBanner.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/handlers/handlers.go" beforeDir="false" afterPath="$PROJECT_DIR$/handlers/handlers.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/usuario.go" beforeDir="false" afterPath="$PROJECT_DIR$/models/usuario.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,8 +82,13 @@
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/routers" />
     <property name="settings.editor.selected.configurable" value="com.goide.configuration.GoLibrariesConfigurableProvider" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\goProjects\src\github.com\llopez594\twittor\routers" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="Vcs.Log.Tabs.Properties">
@@ -88,6 +111,22 @@
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="407" y="96" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.860/1440.145.1440.860@0.0.1440.860" timestamp="1607886524813" />
+    <state width="957" height="222" key="GridCell.Tab.0.bottom" timestamp="1608076256352">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state width="957" height="222" key="GridCell.Tab.0.bottom/0.0.1440.860/1440.145.1440.860@0.0.1440.860" timestamp="1608076256352" />
+    <state width="957" height="222" key="GridCell.Tab.0.center" timestamp="1608076256352">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state width="957" height="222" key="GridCell.Tab.0.center/0.0.1440.860/1440.145.1440.860@0.0.1440.860" timestamp="1608076256352" />
+    <state width="957" height="222" key="GridCell.Tab.0.left" timestamp="1608076256352">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state width="957" height="222" key="GridCell.Tab.0.left/0.0.1440.860/1440.145.1440.860@0.0.1440.860" timestamp="1608076256352" />
+    <state width="957" height="222" key="GridCell.Tab.0.right" timestamp="1608076256352">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state width="957" height="222" key="GridCell.Tab.0.right/0.0.1440.860/1440.145.1440.860@0.0.1440.860" timestamp="1608076256352" />
     <state x="136" y="68" key="MergeDialog" timestamp="1607989825124">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
